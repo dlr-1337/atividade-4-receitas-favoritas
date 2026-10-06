@@ -1,0 +1,19 @@
+{
+  "name": "Sindicato dos Eletrodomésticos",
+  "short_name": "Sindicato",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#E7ECE5",
+  "theme_color": "#25483A",
+  "description": "Receitas aprovadas em assembleia por cinco aparelhos com voz própria.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "marca.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

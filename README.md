@@ -1,17 +1,24 @@
-# Tempero de Casa
+# Sindicato dos Eletrodomésticos
+
+Um mural de receitas na porta da geladeira. Gilda, Osvaldo, Léo, Cida e Miro dividiram o trabalho da cozinha e resolveram apresentar suas receitas em comunicados assinados.
 
 Aplicativo Flutter da Atividade 4: Navegação entre telas.
 
-O app reúne nove receitas em três categorias: Doces, Salgadas e Bebidas. Cada Card abre uma tela com a descrição, os ingredientes e o modo de preparo. O coração marca uma receita como favorita enquanto o aplicativo estiver aberto.
+## O app
 
-O menu lateral abre as telas de Configurações e Sobre. Ao voltar de uma receita ou dessas telas, a categoria selecionada é mantida.
+- Doces, Salgadas e Bebidas, com três receitas em cada aba.
+- Cards como comunicados, com retratos desenhados usando widgets Flutter.
+- Detalhes com descrição, ingredientes e modo de preparo.
+- Coração para marcar favoritas, identificadas por um carimbo durante a sessão.
+- Drawer com Configurações (regulamento) e Sobre (ata de fundação e personagens).
+- Retorno por seta ou botão do dispositivo, preservando a aba selecionada.
 
 ## Executar
 
-Projeto verificado com Flutter 3.47.6. Com o Flutter instalado:
+Projeto verificado com Flutter 3.47.6.
 
 ```bash
-cd tempero_de_casa
+cd sindicato_eletrodomesticos
 flutter pub get
 flutter run
 ```
@@ -25,20 +32,16 @@ flutter run -d chrome
 ## Verificar
 
 ```bash
-cd tempero_de_casa
+cd sindicato_eletrodomesticos
 flutter analyze
 flutter test
 flutter build web
 ```
 
-## Conteúdo utilizado
-
-- Dart: classes, listas e construtores.
-- Interface: MaterialApp, Scaffold, Column, ListView e Card.
-- Estado: StatefulWidget e setState.
-- Navegação: Navigator.push, MaterialPageRoute e Navigator.pop.
-- Abas e menu: BottomNavigationBar e Drawer.
-
-Os dados das receitas ficam em `lib/receitas.dart`, e as telas em `lib/main.dart`. O projeto contém suporte a Android e web.
-
 Se o `flutter analyze` dessa versão apresentar um erro de JSON em um caminho com acentos, use `dart analyze` ou execute a análise por um caminho sem acentos.
+
+## Organização
+
+`lib/main.dart` contém as telas; `lib/receitas.dart` contém o catálogo e os personagens; `lib/personagens.dart` monta os retratos com `Stack`, `Container` e outros widgets.
+
+O projeto utiliza classes e listas em Dart, `StatefulWidget`, `setState`, `Card`, `BottomNavigationBar`, `Drawer`, `Navigator.push`, `MaterialPageRoute` e retorno pela pilha de navegação. Há suporte a Android e web; a prévia e os testes de interface foram verificados na versão web e em testes de widgets.
